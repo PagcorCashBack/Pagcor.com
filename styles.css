@@ -1,36 +1,33 @@
-/* Update your styles.css file with this block */
+/* --- Add or modify this block in your styles.css --- */
 
-.hero-section {
-    /* 1. Dimensions */
-    min-height: 500px; /* Ensure a minimum height for visibility */
-    padding: 40px 0; /* Add top and bottom padding */
-
-    /* 2. Background Image Properties (VERIFY THIS PATH) */
+body {
+    /* Ensure the body spans the full viewport height to show the background
+       (if you want it to cover the entire page)
+    */
+    min-height: 100vh;
+    
+    /* 1. Set the background image and its path */
+    /* VERIFY: Make sure your image is named 'pagcor-sep-11.jpg' and is in the 'image' folder */
     background-image: url('image/pagcor-sep-11.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
     
-    /* 3. Overlay for Text Readability */
-    /* Add a semi-transparent black overlay to help white text stand out */
-    background-color: rgba(0, 0, 0, 0.5); 
-    background-blend-mode: overlay; 
+    /* 2. Configure how the image should display */
+    background-size: cover;      /* Scales the image to cover the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;/* Prevents tiling */
+    background-attachment: fixed; /* (Optional) Keeps the background fixed when scrolling */
     
-    /* 4. Content Alignment */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* 3. Ensure the content color is still readable (might already be set) */
+    color: #fff; /* White text for contrast */
+    
+    /* If your hero-section has a black background color, that will still show on top */
 }
 
-.hero-content {
-    text-align: center;
-    color: white; /* Make the text white to show against the dark background */
-    z-index: 10;
-    max-width: 90%;
-}
-
-.hero-content h2 {
-    /* Adjusting heading margin/font size if necessary */
-    margin-top: 0;
-    font-size: 2.5em;
+/* If you want to maintain the contrast of the black box, 
+   make sure your .hero-content has a strong background color.
+   (This style might already be in your CSS) 
+*/
+.hero-section .hero-content {
+    background-color: #1a1a1a; /* Dark background for the central box */
+    padding: 30px;
+    border-radius: 8px;
 }
