@@ -8,23 +8,22 @@
 }
 
 body {
-    /* Font styles */
+    /* All previous body styles... */
     font-family: 'Poppins', sans-serif;
     color: #f0f0f0;
     line-height: 1.6;
     min-height: 100vh;
     
-    /* BACKGROUND IMAGE STYLES - USES YOUR EXACT FILE PATH */
-    /* *** PATH VERIFIED: 'image/pagcor-sep11.jpg' *** */
+    /* *** CRITICAL FIX: Ensure full-page coverage and readability *** */
+    background-color: #000000; /* Use pure black as the base */
     background-image: url('image/pagcor-sep11.jpg'); 
     background-size: cover;      
     background-position: center; 
     background-repeat: no-repeat;
     background-attachment: fixed;
     
-    /* Added strong dark overlay to ensure text readability over the image */
-    background-color: rgba(18, 18, 18, 0.9);
-    background-blend-mode: overlay; 
+    /* Ensure the blend mode is explicitly set to make the image visible */
+    background-blend-mode: luminosity; 
 }
 
 a {
