@@ -1,63 +1,36 @@
-/* Placeholder for your existing styles.css code */
-/* You should paste the new code below into your existing file */
+/* Update your styles.css file with this block */
 
-/* --- NEW HERO SECTION STYLES START HERE --- */
 .hero-section {
-    /* Set the height to make the background image visible */
-    min-height: 500px; /* Adjust this value as needed for height */
-    
-    /* 1. Set the background image and its path */
+    /* 1. Dimensions */
+    min-height: 500px; /* Ensure a minimum height for visibility */
+    padding: 40px 0; /* Add top and bottom padding */
+
+    /* 2. Background Image Properties (VERIFY THIS PATH) */
     background-image: url('image/pagcor-sep-11.jpg'); 
-    
-    /* 2. Configure how the image should display */
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
-
-    /* 3. Improve readability of the foreground text */
+    background-repeat: no-repeat;
+    
+    /* 3. Overlay for Text Readability */
+    /* Add a semi-transparent black overlay to help white text stand out */
     background-color: rgba(0, 0, 0, 0.5); 
     background-blend-mode: overlay; 
     
-    /* Center the content vertically and horizontally */
+    /* 4. Content Alignment */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 0; 
 }
 
 .hero-content {
-    /* Ensure the text is on top of the image and centered */
     text-align: center;
-    color: white; 
+    color: white; /* Make the text white to show against the dark background */
     z-index: 10;
     max-width: 90%;
-    /* You may need to adjust the background color of this box if you have one */
-    background: none; 
-}
-/* --- NEW HERO SECTION STYLES END HERE --- */
-
-
-/* --- Other Styles (Example CSS you might already have) --- */
-
-body {
-    background-color: #1a1a1a; 
-    color: #fff;
-    font-family: sans-serif;
-    margin: 0;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #2a2a2a;
+.hero-content h2 {
+    /* Adjusting heading margin/font size if necessary */
+    margin-top: 0;
+    font-size: 2.5em;
 }
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #f0f0f0;
-}
-
-/* ... rest of your styles ... */
