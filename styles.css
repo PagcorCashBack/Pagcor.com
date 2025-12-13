@@ -1,39 +1,218 @@
+/*
+ * Assuming the following structure:
+ * - Image file: 'assets/pagcor-sep-11.jpg' (or whatever your image file is named)
+ * - main HTML file: index.html
+ * - CSS file: styles.css
+ */
 
-/* Ensure the body spans the full viewport height */
+/* =====================================
+   GLOBAL & BACKGROUND STYLES
+   ===================================== */
 body {
+    /* Set dark background and default font color */
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+
+    /* Ensure the body covers the entire viewport height */
     min-height: 100vh;
-    margin: 0; /* Important: removes default margin that might cause scrollbars */
-    padding: 0; /* Important: removes default padding */
     
     /* 1. Set the background image and its path */
-    /* NOTE: We are now using 'assets/' instead of 'image/' */
+    /* *** VERIFY THIS PATH MATCHES YOUR UPLOADED FILE *** */
     background-image: url('assets/pagcor-sep-11.jpg'); 
     
     /* 2. Configure how the image should display */
-    background-size: cover;      /* Scales the image to cover the entire area without stretching */
+    background-size: cover;      /* Scales to cover the entire page */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;/* Prevents tiling */
-    background-attachment: fixed;/* Keeps the background image steady when the user scrolls */
-    
-    /* Ensure all default text is white */
-    color: #fff; 
+    background-attachment: fixed;/* Keeps the image fixed during scroll */
 }
 
-/* Make sure your central content box retains its dark background 
-   to contrast with the new background image.
-*/
-.hero-content {
-    /* If you want the content box to be black: */
-    background-color: #1a1a1a; 
-    padding: 30px;
-    border-radius: 8px;
-    /* You may need to add this property if it's not present */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+.container {
+    /* Used for centering and max-width if you choose to use it */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Basic styling for the header and footer to sit nicely over the background */
-header, footer {
-    /* Make the header and footer slightly transparent or dark */
+
+/* =====================================
+   HEADER STYLES
+   ===================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    /* Use semi-transparent dark background for header/footer contrast */
     background-color: rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     z-index: 100;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #e74c3c; /* Red highlight color */
+}
+
+
+/* =====================================
+   HERO SECTION (The Central Box) STYLES
+   ===================================== */
+.hero-section {
+    /* Use flexbox to center the content vertically on the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ensure it takes up most of the screen height below the header */
+    min-height: calc(100vh - 80px); 
+    padding: 40px 0;
+}
+
+.hero-content {
+    /* This creates the dark central box */
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly transparent dark background */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 450px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h2 {
+    color: #fff;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.signup-form {
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.input-group button {
+    background-color: #e74c3c; /* Red button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.input-group button:hover {
+    background-color: #c0392b;
+}
+
+.terms {
+    font-size: 0.8em;
+    margin-top: 15px;
+    color: #aaa;
+}
+
+
+/* =====================================
+   FEATURES SECTION STYLES
+   ===================================== */
+.features-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+    text-align: center;
+    /* Optional: Give this area a transparent background so the body image shows */
+    background-color: transparent; 
+}
+
+.feature-box {
+    background-color: rgba(45, 45, 45, 0.8); /* Slightly lighter box */
+    padding: 20px;
+    border-radius: 8px;
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box i {
+    font-size: 2.5em;
+    color: #e74c3c; /* Red icon color */
+    margin-bottom: 10px;
+}
+
+
+/* =====================================
+   FOOTER STYLES
+   ===================================== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-top: 1px solid #333;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e74c3c;
+}
+
+.social-icons i {
+    font-size: 1.5em;
+    color: #fff;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #e74c3c;
 }
