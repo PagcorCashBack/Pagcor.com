@@ -8,22 +8,22 @@
 }
 
 body {
-    /* All previous body styles... */
+    /* Font styles */
     font-family: 'Poppins', sans-serif;
     color: #f0f0f0;
     line-height: 1.6;
     min-height: 100vh;
     
-    /* *** CRITICAL FIX: Ensure full-page coverage and readability *** */
-    background-color: #000000; /* Use pure black as the base */
-    background-image: url('images/pagcor-sep11.jpg'); 
+    /* BACKGROUND IMAGE STYLES - USING THE VERIFIED PATH */
+    background-image: url('image/pagcor-sep11.jpg'); 
     background-size: cover;      
     background-position: center; 
     background-repeat: no-repeat;
     background-attachment: fixed;
     
-    /* Ensure the blend mode is explicitly set to make the image visible */
-    background-blend-mode: luminosity; 
+    /* Overlay for Text Readability AND to ensure the background displays */
+    background-color: rgba(18, 18, 18, 0.9);
+    background-blend-mode: overlay; 
 }
 
 a {
@@ -40,7 +40,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    /* Dark, semi-transparent background for professionalism */
     background-color: rgba(18, 18, 18, 0.9); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     position: fixed; 
@@ -51,7 +50,7 @@ header {
 .logo {
     font-size: 28px;
     font-weight: 700;
-    color: #e74c3c; /* Primary brand color */
+    color: #e74c3c; 
 }
 
 nav a {
@@ -63,7 +62,7 @@ nav a {
 }
 
 nav a:hover, nav a.active {
-    color: #ff6347; /* Lighter red on hover */
+    color: #ff6347; 
 }
 
 /* Subtle underline hover effect */
@@ -91,7 +90,7 @@ nav a:hover::after, nav a.active::after {
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
-    padding-top: 80px; 
+    padding-top: 80px; /* Space for the fixed header */
 }
 
 .hero-content {
@@ -171,15 +170,19 @@ nav a:hover::after, nav a.active::after {
 }
 
 /* =====================================
-   3. FEATURES SECTION STYLES
+   3. FEATURES SECTION STYLES (ALIGNMENT FIX)
    ===================================== */
 .features-section {
     display: flex;
     justify-content: center;
     gap: 40px;
-    padding: 60px 5%;
+    padding: 60px 5%; 
     text-align: center;
-    margin-top: -100px; 
+    
+    /* *** ALIGNMENT FIX: Removed negative margin to prevent overlap *** */
+    /* *** Added extra padding to push content down below the fold *** */
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .feature-box {
