@@ -1,180 +1,63 @@
-/* Basic Reset and Variables */
-:root {
-    --dark-bg: #1e1e1e;
-    --dark-text: #ffffff;
-    --primary-color: #f04a4e; /* Red/Crimson color */
-    --input-bg: #333333;
-    --font-family: sans-serif;
+/* Placeholder for your existing styles.css code */
+/* You should paste the new code below into your existing file */
+
+/* --- NEW HERO SECTION STYLES START HERE --- */
+.hero-section {
+    /* Set the height to make the background image visible */
+    min-height: 500px; /* Adjust this value as needed for height */
+    
+    /* 1. Set the background image and its path */
+    background-image: url('image/pagcor-sep-11.jpg'); 
+    
+    /* 2. Configure how the image should display */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+    /* 3. Improve readability of the foreground text */
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: overlay; 
+    
+    /* Center the content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0; 
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.hero-content {
+    /* Ensure the text is on top of the image and centered */
+    text-align: center;
+    color: white; 
+    z-index: 10;
+    max-width: 90%;
+    /* You may need to adjust the background color of this box if you have one */
+    background: none; 
 }
+/* --- NEW HERO SECTION STYLES END HERE --- */
+
+
+/* --- Other Styles (Example CSS you might already have) --- */
 
 body {
-    font-family: var(--font-family);
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-    line-height: 1.6;
+    background-color: #1a1a1a; 
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
 }
 
-/* Header/Navigation Styling */
 header {
-    background-color: #000000;
-    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 50px;
+    background-color: #2a2a2a;
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 24px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #f0f0f0;
 }
 
-nav a {
-    color: var(--dark-text);
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 0.9em;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
-
-nav a:hover, nav a.active {
-    opacity: 1;
-    color: var(--primary-color);
-}
-
-/* Hero Section (Banner) */
-.hero-section {
-    background: url('path/to/your/roulette_image.jpg') no-repeat center center/cover; /* Replace with your image URL */
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-/* Overlay to darken background image and make text readable */
-.hero-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-}
-
-.container {
-    z-index: 10; /* Ensures content is above the overlay */
-    max-width: 500px;
-    padding: 40px;
-    background-color: rgba(30, 30, 30, 0.85); /* Slightly transparent dark box for form */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    text-align: left;
-}
-
-.hero-content h2 {
-    font-size: 2.2em;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    margin-bottom: 25px;
-    font-size: 1.1em;
-}
-
-.signup-form {
-    margin-top: 20px;
-}
-
-.input-group {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.input-group input[type="tel"] {
-    flex-grow: 1;
-    padding: 15px;
-    border: none;
-    background-color: var(--input-bg);
-    color: var(--dark-text);
-    font-size: 1em;
-    border-radius: 4px 0 0 4px;
-}
-
-.input-group button {
-    background-color: var(--primary-color);
-    color: var(--dark-text);
-    border: none;
-    padding: 15px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1em;
-    border-radius: 0 4px 4px 0;
-    transition: background-color 0.3s;
-}
-
-.input-group button:hover {
-    background-color: #d13a3d;
-}
-
-.terms {
-    font-size: 0.8em;
-    color: #aaaaaa;
-    text-align: center;
-}
-
-/* Feature Icons Styling */
-.features-section {
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-    gap: 80px;
-    border-top: 1px solid #333;
-}
-
-.feature-box {
-    text-align: center;
-}
-
-.feature-box i {
-    font-size: 3em;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.feature-box p {
-    font-size: 1em;
-}
-
-
-/* Footer Styling */
-footer {
-    background-color: #111111;
-    color: #999999;
-    padding: 25px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9em;
-}
-
-.footer-links a {
-    color: #999999;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-.social-icons i {
-    font-size: 1.2em;
-    margin-left: 15px;
-    cursor: pointer;
-}
+/* ... rest of your styles ... */
