@@ -1,1 +1,39 @@
 
+/* Ensure the body spans the full viewport height */
+body {
+    min-height: 100vh;
+    margin: 0; /* Important: removes default margin that might cause scrollbars */
+    padding: 0; /* Important: removes default padding */
+    
+    /* 1. Set the background image and its path */
+    /* NOTE: We are now using 'assets/' instead of 'image/' */
+    background-image: url('assets/pagcor-sep-11.jpg'); 
+    
+    /* 2. Configure how the image should display */
+    background-size: cover;      /* Scales the image to cover the entire area without stretching */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;/* Prevents tiling */
+    background-attachment: fixed;/* Keeps the background image steady when the user scrolls */
+    
+    /* Ensure all default text is white */
+    color: #fff; 
+}
+
+/* Make sure your central content box retains its dark background 
+   to contrast with the new background image.
+*/
+.hero-content {
+    /* If you want the content box to be black: */
+    background-color: #1a1a1a; 
+    padding: 30px;
+    border-radius: 8px;
+    /* You may need to add this property if it's not present */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
+
+/* Basic styling for the header and footer to sit nicely over the background */
+header, footer {
+    /* Make the header and footer slightly transparent or dark */
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 100;
+}
